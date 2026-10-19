@@ -1,0 +1,70 @@
+/* White-led surface system. Neutral contrast comes from borders, not gray fills. */
+body,
+.about-story,
+.products-compact,
+.industries,
+.solutions,
+.projects-carousel,
+.project-card,
+.clients-marquee,
+.resources-editorial,
+.footer-expanded,
+.articles,
+.product-selector,
+.product-tab,
+.product-focus,
+.product-focus-image,
+.industry-tabs,
+.industry-tab,
+.solution-map article,
+.logo-marquee,
+.logo-marquee figure,
+.search-box {
+  background-color: #fff;
+}
+
+.products-compact,
+.about-story,
+.industries,
+.solutions,
+.projects-carousel,
+.clients-marquee,
+.resources-editorial,
+.footer-expanded {
+  background-image: none;
+}
+
+.product-focus-image {
+  border-right: 1px solid #d8dde1;
+}
+
+.product-focus,
+.product-selector,
+.solution-map,
+.project-card {
+  box-shadow: none;
+}
+
+.project-card,
+.product-focus,
+.product-selector,
+.solution-map article {
+  border-color: #d8dde1;
+}
+
+.solution-map { background: #fff; gap: 0; }
+.solution-map article { border-right: 1px solid #d8dde1; border-bottom: 1px solid #d8dde1; }
+.solution-map article:nth-of-type(even) { border-right: 0; }
+
+.products-compact + .about-story,
+.about-story + .industries,
+.industries + .solutions,
+.solutions + .why-showcase,
+.projects-carousel + .clients-marquee,
+.clients-marquee + .resources-editorial {
+  border-top: 1px solid #e0e4e7;
+}
+
+@media (max-width: 620px) {
+  .product-focus-image { border-right: 0; border-bottom: 1px solid #d8dde1; }
+}
