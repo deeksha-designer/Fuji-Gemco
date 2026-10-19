@@ -1,0 +1,258 @@
+/* White-led surface system. Neutral contrast comes from borders, not gray fills. */
+body,
+.about-story,
+.products-compact,
+.industries,
+.solutions,
+.projects-carousel,
+.project-card,
+.clients-marquee,
+.resources-editorial,
+.footer-expanded,
+.articles,
+.product-selector,
+.product-tab,
+.product-focus,
+.product-focus-image,
+.industry-tabs,
+.industry-tab,
+.solution-map article,
+.logo-marquee,
+.logo-marquee figure,
+.search-box {
+  background-color: #fff;
+}
+
+/* Final consistency pass — October 2026 */
+.abb-hero { height: 80vh; min-height: 560px; }
+
+.products-compact,
+.about-story,
+.industries,
+.why-showcase,
+.projects-carousel,
+.resources-editorial,
+.contact-banner { padding-top: 80px; padding-bottom: 80px; }
+
+.trust-strip { padding: 0; border: 0; background: #fff; }
+.trust-strip .logo-marquee { margin: 0; border: 0; padding: 12px 0; }
+.trust-strip .logo-marquee figure { width: 176px; height: 92px; padding: 18px 25px; border: 0; background: #fff; }
+.trust-strip .logo-marquee img { max-height: 58px; filter: none; opacity: .84; }
+.trust-strip .logo-marquee figure:hover img { opacity: 1; transform: scale(1.06); }
+.trust-stats { border: 0; background: #005BAC; }
+.trust-stats > div { min-height: 118px; border: 0; border-right: 1px solid rgba(255,255,255,.24); color: #fff; }
+.trust-stats > div:last-child { border-right: 0; }
+.trust-stats > div:hover { color: #fff; background: rgba(255,255,255,.07); }
+.trust-stats b { color: #fff; }
+.trust-stats span { color: rgba(255,255,255,.82); font-size: 13px; }
+
+.why-showcase,
+.why-showcase::before { background-image: url('assets/why-engineering-v2.png'); }
+
+.product-carousel-controls button,
+.industry-card-controls button,
+.project-controls button {
+  width: 44px; height: 44px; padding: 0; border: 1px solid #bdc7ce; border-radius: 50%;
+  display: inline-grid; place-items: center; background: #fff; color: #17242d;
+  font-size: 19px; line-height: 1; cursor: pointer;
+  transition: color .2s ease, background .2s ease, border-color .2s ease, transform .2s ease;
+}
+.product-carousel-controls button:hover,
+.industry-card-controls button:hover,
+.project-controls button:hover { color: #fff; background: #005BAC; border-color: #005BAC; transform: translateY(-2px); }
+
+.insight-list h3 { font-size: 24px; line-height: 1.2; font-weight: 700; }
+.insight-list > a { overflow: hidden; transition: border-color .25s ease, transform .3s ease, background .3s ease; }
+.insight-list > a:hover { transform: translateX(6px); border-color: #005BAC; background: #f8fbfe; }
+.insight-list img { transition: transform .55s cubic-bezier(.2,.65,.25,1); }
+.insight-list > a:hover img { transform: scale(1.045); }
+.insight-feature { overflow: hidden; transition: transform .3s ease, box-shadow .3s ease; }
+.insight-feature:hover { transform: translateY(-5px); box-shadow: 0 18px 44px rgba(18,37,52,.12); }
+.insight-feature > img { transition: transform .6s cubic-bezier(.2,.65,.25,1); }
+.insight-feature:hover > img { transform: scale(1.03); }
+
+.footer-links b { font-size: 16px; }
+.footer-links a,
+.footer-links address { font-size: 14px; line-height: 1.55; }
+.footer-brandbar nav,
+.footer-brandbar address { font-size: 13px; }
+.footer-legal { font-size: 12px; }
+
+.explore-panel {
+  width: min(calc(100% - 64px), 1480px); padding: 38px 40px 42px;
+  grid-template-columns: 250px minmax(0, 1fr) 270px; gap: 46px;
+  border: 0; border-radius: 0 0 20px 20px; background: #fff;
+}
+.explore-intro h2 { margin-bottom: 14px; font-size: 28px; }
+.explore-intro > p { margin: 0; color: #59666f; font-size: 14px; line-height: 1.5; }
+.explore-quick { margin-top: 24px; padding-top: 17px; border-top: 1px solid #d6dce0; }
+.explore-intro .explore-quick a { margin: 0; padding: 7px 0; display: block; color: #45535d; font-size: 12px; }
+.explore-intro .explore-quick a:hover { color: #005BAC; transform: translateX(4px); }
+.explore-group h3 { font-size: 17px; }
+.explore-panel nav .explore-group a,
+.explore-panel nav .explore-group a:nth-child(odd) { padding: 8px 0; font-size: 13px; }
+.explore-feature { display: grid; grid-template-rows: 1fr 1fr; gap: 10px; overflow: visible; background: transparent; }
+.explore-feature > a { min-height: 0; display: grid; grid-template-columns: 104px 1fr; overflow: hidden; border-radius: 12px; background: #f5f7f8; color: #17242d; }
+.explore-feature > a > img { width: 104px; height: 100%; min-height: 118px; object-fit: cover; }
+.explore-feature > a > div { padding: 15px 14px; display: flex; flex-direction: column; align-items: flex-start; }
+.explore-feature > a small { color: #CE2520; font-size: 10px; }
+.explore-feature > a b { margin: 5px 0 12px; font-size: 15px; line-height: 1.2; }
+.explore-feature > a span { margin-top: auto; color: #005BAC; font-size: 11px; font-weight: 700; }
+.explore-feature > a:hover img { transform: scale(1.04); }
+
+@media (max-width: 900px) {
+  .abb-hero { height: 80vh; min-height: 520px; }
+  .explore-panel { width: calc(100% - 32px); grid-template-columns: 1fr; padding: 28px; }
+  .trust-stats > div { min-height: 105px; }
+}
+@media (max-width: 620px) {
+  .products-compact,.about-story,.industries,.why-showcase,.projects-carousel,.resources-editorial,.contact-banner { padding-top: 80px; padding-bottom: 80px; }
+  .trust-strip .logo-marquee figure { width: 145px; height: 82px; padding: 15px 20px; }
+  .trust-stats span { font-size: 12px; }
+  .insight-list h3 { font-size: 20px; }
+  .footer-links b { font-size: 15px; }
+  .footer-links a,.footer-links address { font-size: 13px; }
+}
+
+.products-compact,
+.about-story,
+.industries,
+.solutions,
+.projects-carousel,
+.clients-marquee,
+.resources-editorial,
+.footer-expanded {
+  background-image: none;
+}
+
+.product-focus-image {
+  border-right: 1px solid #d8dde1;
+}
+
+.product-focus,
+.product-selector,
+.solution-map,
+.project-card {
+  box-shadow: none;
+}
+
+.project-card,
+.product-focus,
+.product-selector,
+.solution-map article {
+  border-color: #d8dde1;
+}
+
+.solution-map { background: #fff; gap: 0; }
+.solution-map article { border-right: 1px solid #d8dde1; border-bottom: 1px solid #d8dde1; }
+.solution-map article:nth-of-type(even) { border-right: 0; }
+
+.products-compact + .about-story,
+.about-story + .industries,
+.industries + .solutions,
+.solutions + .why-showcase,
+.projects-carousel + .clients-marquee,
+.clients-marquee + .resources-editorial {
+  border-top: 1px solid #e0e4e7;
+}
+
+@media (max-width: 620px) {
+  .product-focus-image { border-right: 0; border-bottom: 1px solid #d8dde1; }
+}
+
+/* Latest interaction and footer refinements. */
+.trust-stats {
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+  padding-inline: max(24px, calc((100vw - var(--shell)) / 2));
+}
+.trust-stats { padding: 40px 40px 0 50px; }
+.trust-stats > div { min-height: 96px; padding: 0 28px 40px; }
+.trust-stats > div:first-child { padding-left: 0; }
+.trust-stats b { font-size: 33px; font-variant-numeric: tabular-nums; }
+.logo-marquee-track { animation-duration: 78s; }
+
+.project-intro { flex-basis: 340px; min-width: 340px; }
+.project-card { flex-basis: calc((100% - 375px) / 2.7); }
+
+.footer-brandbar nav { gap: 14px; }
+.footer-brandbar nav .footer-contact-cta {
+  min-height: 42px;
+  padding: 0 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border: 1px solid #CE2520;
+  background: #CE2520;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background .2s ease, border-color .2s ease, transform .2s ease;
+}
+.footer-brandbar nav .footer-contact-cta:hover { background: #a91d19; border-color: #a91d19; color: #fff; transform: translateY(-2px); }
+.footer-brandbar nav .footer-contact-cta span { color: inherit; font-size: 17px; }
+.footer-brandbar nav .footer-back-top { padding: 10px 4px; color: #384750; font-weight: 600; }
+.footer-brandbar nav .footer-back-top:hover { color: #005BAC; }
+
+@media (max-width: 900px) {
+  .trust-stats { padding-inline: 24px; }
+  .project-intro { flex-basis: 280px; min-width: 280px; }
+  .project-card { flex-basis: calc((100% - 310px) / 1.7); }
+}
+@media (max-width: 620px) {
+  .trust-stats { padding-inline: 18px; }
+  .logo-marquee-track { animation-duration: 64s; }
+  .project-intro { flex-basis: 82vw; min-width: 82vw; }
+  .project-card { flex-basis: 86vw; }
+  .footer-brandbar nav .footer-contact-cta { width: 100%; }
+}
+
+/* Full-width blue band with content aligned to the site shell. */
+.trust-stats {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+  grid-template-columns: none;
+  background: #005BAC;
+}
+.trust-stats > .trust-stats-grid {
+  width: 1360px !important;
+  max-width: calc(100% - 96px) !important;
+  min-height: 0;
+  margin-inline: auto;
+  padding: 40px 0 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: stretch;
+  border: 0;
+  background: transparent;
+}
+.trust-stats-grid > div {
+  min-height: 96px;
+  padding: 0 28px 40px;
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
+  border: 0;
+  border-right: 1px solid rgba(255,255,255,.24);
+  color: #fff;
+}
+.trust-stats-grid > div:first-child { padding-left: 0; }
+.trust-stats-grid > div:last-child { padding-right: 0; border-right: 0; }
+.trust-stats-grid > div:hover { background: transparent; }
+
+@media (max-width: 900px) {
+  .trust-stats > .trust-stats-grid { width: min(calc(100% - 48px), var(--shell)); grid-template-columns: repeat(2, 1fr); }
+  .trust-stats-grid > div:nth-child(2) { border-right: 0; }
+  .trust-stats-grid > div:nth-child(3) { padding-left: 0; }
+}
+@media (max-width: 620px) {
+  .trust-stats > .trust-stats-grid { width: calc(100% - 36px); }
+  .trust-stats-grid > div { min-height: 92px; padding: 0 18px 28px; align-items: flex-start; flex-direction: column; gap: 7px; }
+  .trust-stats-grid > div:nth-child(2) { padding-right: 0; }
+}
